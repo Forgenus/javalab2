@@ -1,4 +1,4 @@
-package Tokenizer;
+package Calculator;
 
 import java.util.Objects;
 
@@ -46,6 +46,7 @@ public class Token {
     public Type getType() {
         return type;
     }
+
 
     public String getValue() {
         return value;

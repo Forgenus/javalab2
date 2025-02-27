@@ -1,4 +1,4 @@
-package Tokenizer;
+package Calculator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ public class Tokenizer {
     static Set<String> validFunctions = new HashSet<>();
 
     static {
-        Collections.addAll(validFunctions, "sqrt", "sin", "cos", "tan", "log", "ln", "lg", "sin", "atan");
+        Collections.addAll(validFunctions, "sqrt", "sin", "cos", "tan", "log", "ln", "lg", "sin", "ctg");
     }
 
     StringBuilder numberBuffer = new StringBuilder();
@@ -65,7 +65,7 @@ public class Tokenizer {
     }
 
     public void tokenize(String str) {
-
+        str = str.replaceAll("\\s+","");
 
         tokens = new ArrayList<>();
 
