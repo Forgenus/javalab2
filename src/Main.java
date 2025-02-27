@@ -10,8 +10,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String example = "2x+3y+cos(sqrt(2angle))";
-        var tokens = Tokenizer.tokenize(example);
+        String input = "-2x+3y/(10sqrt(pi/2))";
+        Tokenizer tokenizer = new Tokenizer();
+        tokenizer.tokenize(input);
+        var tokens = tokenizer.getTokens();
         printTokens(tokens);
 
     }
