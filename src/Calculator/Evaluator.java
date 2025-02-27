@@ -7,7 +7,7 @@ import java.util.Stack;
 
 import static Calculator.Token.Type.*;
 
-public class Evaluator {
+ class Evaluator {
 
 
     public static double evaluate(Deque<Token> que){

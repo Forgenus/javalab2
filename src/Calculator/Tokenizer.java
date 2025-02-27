@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-public class Tokenizer {
+ class Tokenizer {
 
     static String validOperators = "+-*/^";
     static Set<String> validFunctions = new HashSet<>();
@@ -15,9 +15,9 @@ public class Tokenizer {
         Collections.addAll(validFunctions, "sqrt", "sin", "cos", "tan", "log", "ln", "lg", "sin", "ctg");
     }
 
-    StringBuilder numberBuffer = new StringBuilder();
-    StringBuilder letterBuffer = new StringBuilder();
-    ArrayList<Token> tokens;
+    private StringBuilder numberBuffer = new StringBuilder();
+    private StringBuilder letterBuffer = new StringBuilder();
+    private ArrayList<Token> tokens;
 
     private boolean areBuffersFilled() {
         return !numberBuffer.isEmpty() && !letterBuffer.isEmpty();

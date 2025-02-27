@@ -2,7 +2,7 @@ package Calculator;
 
 import java.util.Objects;
 
-public class Token {
+ class Token {
     public enum Type {
         OPERATOR,
         FUNCTION,
