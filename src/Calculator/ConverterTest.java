@@ -1,7 +1,6 @@
 package Calculator;
 
 import org.junit.jupiter.api.Test;
-
 import static Calculator.Token.Type.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,5 +1,4 @@
 package Calculator;
-
 import java.util.Objects;
 
  class Token {

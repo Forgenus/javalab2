@@ -13,6 +13,7 @@ import static Calculator.Token.Type.*;
     public static double evaluate(Deque<Token> que){
         HashMap<String,Double> variables = new HashMap<>();
         Stack<Double> stack = new Stack<>();
+        Scanner console = new Scanner(System.in);
         while(!que.isEmpty()){
 
             Token currToken = que.pop();
@@ -30,7 +31,6 @@ import static Calculator.Token.Type.*;
                         val = variables.get(varName);
                     else{
                         System.out.println("Enter value for "+ varName );
-                        Scanner console = new Scanner(System.in);
                         val = console.nextDouble();
                         variables.put(varName,val);
                     }

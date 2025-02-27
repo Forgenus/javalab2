@@ -1,14 +1,13 @@
 package Calculator;
 
 import java.util.*;
-
 import static Calculator.Token.Type.*;
 
 
 public class Converter {
 
     private static final HashMap<String, Integer> Precedence = new HashMap<>(Map.of(
-            "&", 2,
+            "&", 6,
             "+", 3,
             "-", 3,
             "*", 4,
