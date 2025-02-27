@@ -1,6 +1,8 @@
 package Calculator;
 
 import org.junit.jupiter.api.Test;
+
+import static Calculator.Token.Type.*;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,29 +16,30 @@ public class TokenizerTest {
 
     @Test
     public void testTokenizeWithComplexExpression() {
-        Tokenizer tokenizer = new Tokenizer();
+
        String input = "-2x+3y/(10sqrt(pi/2))";
         List<Token> expected = Arrays.asList(
-                new Token(Token.Type.OPERATOR, "&"),
-                new Token(Token.Type.INT, "2"),
-                new Token(Token.Type.OPERATOR, "*"),
-                new Token(Token.Type.VARIABLE, "x"),
-                new Token(Token.Type.OPERATOR, "+"),
-                new Token(Token.Type.INT, "3"),
-                new Token(Token.Type.OPERATOR, "*"),
-                new Token(Token.Type.VARIABLE, "y"),
-                new Token(Token.Type.OPERATOR, "/"),
-                new Token(Token.Type.L_PARENTHESIS, "("),
-                new Token(Token.Type.INT, "10"),
-                new Token(Token.Type.OPERATOR, "*"),
-                new Token(Token.Type.FUNCTION, "sqrt"),
-                new Token(Token.Type.L_PARENTHESIS, "("),
-                new Token(Token.Type.VARIABLE, "pi"),
-                new Token(Token.Type.OPERATOR, "/"),
-                new Token(Token.Type.INT, "2"),
-                new Token(Token.Type.R_PARENTHESIS, ")"),
-                new Token(Token.Type.R_PARENTHESIS, ")")
+                new Token(OPERATOR, "&"),
+                new Token(INT, "2"),
+                new Token(OPERATOR, "*"),
+                new Token(VARIABLE, "x"),
+                new Token(OPERATOR, "+"),
+                new Token(INT, "3"),
+                new Token(OPERATOR, "*"),
+                new Token(VARIABLE, "y"),
+                new Token(OPERATOR, "/"),
+                new Token(L_PARENTHESIS, "("),
+                new Token(INT, "10"),
+                new Token(OPERATOR, "*"),
+                new Token(FUNCTION, "sqrt"),
+                new Token(L_PARENTHESIS, "("),
+                new Token(VARIABLE, "pi"),
+                new Token(OPERATOR, "/"),
+                new Token(INT, "2"),
+                new Token(R_PARENTHESIS, ")"),
+                new Token(R_PARENTHESIS, ")")
         );
+        Tokenizer tokenizer = new Tokenizer();
         tokenizer.tokenize(input);
         ArrayList<Token> actual = tokenizer.getTokens();
         assertEquals(expected, actual);

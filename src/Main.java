@@ -6,7 +6,6 @@ import Calculator.*;
 public class Main {
 
 
-
     public static void main(String[] args) {
 
         String input = "2x+10y*sqrt(10/2*cos(1))";
